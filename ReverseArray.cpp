@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 
 int main() {
 	int size;
@@ -10,20 +10,12 @@ int main() {
 		std::cout << "Enter array element" << std::endl;
 		std::cin >> arr[i];
 	}
-	if (size % 2 == 0) {
 		for (int i = 0; i < size / 2; ++i) {
 			res = arr[size - 1 - i];
 			arr[size - 1 - i] = arr[i];
 			arr[i] = res;
 		}
-	}
-	else {
-		for (int i = 0; i < (size - 1) / 2; ++i) {
-			res = arr[size - 1 - i];
-			arr[size - 1 - i] = arr[i];
-			arr[i] = res;
-		}
-	}
+	
 	std::cout << std::endl;
 	std::cout << "Reverse array" << std::endl;
 	for (int i = 0; i < size; ++i) {
